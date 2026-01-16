@@ -43,5 +43,8 @@ It's for our database class and its manditory to only use SQL and no other langu
 
 - Vi gjorde lite manuellt för att få fram vilket orderid som stämmer med hans beställning och sökte på det
 
+### Solution day 2 
+- Phone-number: 332-274-4185
+
 ----------------------------------------------------------------------------------
 ## Process solution day 3
