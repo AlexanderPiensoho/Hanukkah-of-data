@@ -1,7 +1,8 @@
 SELECT        name, 
               phone, 
               birthdate, 
-              citystatezip
+              citystatezip,
+              customerid
 FROM          customers 
 WHERE         (birthdate BETWEEN '1939-06-21' AND '1939-07-22' 
               OR birthdate BETWEEN '1951-06-21' AND '1951-07-22' 

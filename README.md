@@ -75,3 +75,22 @@ It's for our database class and its manditory to only use SQL and no other langu
 ### Solution day 3 
 - Phone: 917-288-9635
 
+----------------------------------------------------------------------------------
+## Process solution day 4 
+
+- Kvinna som har handlat på Noahs innan 05.00, hon brukade handla dom första bakelserna från ugnen.
+- kolla om Noahs säljer bike repair kits
+
+- Tar fram alla bakverk på noahs 
+- SELECT  substr(sku,0,4) AS bky, desc FROM products WHERE bky LIKE 'bky';
+
+- plockar fram relevant information från rätt tabeller
+- SELECT name, phone, ordered, shipped, desc FROM customers JOIN orders USING (customerid) JOIN orders_items USING (orderid) JOIN products USING (sku) LIMIT 10;
+
+- dags att få ihop queries och sedan sortera det på tid också.
+- jag fick sortera att ordered och shipped va samma tid (då hon inte förbeställde)
+- och att hon inte skulle vara född för 1980 (killen hon träffade på tinder va född 1999, så det va ett antagande jag vågade göra)
+
+### Solution day 4 
+- phone: 607-231-3605
+
