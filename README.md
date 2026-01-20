@@ -1,8 +1,15 @@
+# Hannukah of data 
+This is my thought process and solutions for Hannukah of data hebrew year 5784:
+https://hanukkah.bluebird.sh/5784/
+
+
 # Thought process
 
 This is just my notes from when i tried to solve the problems for Hannukah of data.
 It's for our database class and its manditory to only use SQL and no other language.
 
+## Solution day 1 
+- 826-636-2286
 ---------------------------------------------------------------------------------
 ## Process solution Day 2
 
@@ -48,3 +55,23 @@ It's for our database class and its manditory to only use SQL and no other langu
 
 ----------------------------------------------------------------------------------
 ## Process solution day 3
+
+- Använd WHERE ... LIKE 1939 '%1951%' OR 1963, 1975, 1987, 1999 
+- Kanske finns en produkt som är spindelhatt eller liknande som också går att sortera på?
+
+- Alla kräftor 1939 
+- SELECT name, phone, birthdate  FROM customers WHERE birthdate BETWEEN '1939-06-21' AND '1939-07-22';
+
+- Alla år utan specifika datum
+- SELECT name, phone, birthdate  FROM customers WHERE birthdate LIKE '1939%' OR '1951%' OR '1963%' OR '1975%' OR '1987%' OR '1999%';
+
+- Det här fungerade ej, men tror jag är något på spåret 
+- SELECT name, phone, birthdate  FROM (SELECT name, phone, birthdate FROM customers WHERE birthdate BETWEEN '1939-06-21' AND '1999-07-22') WHERE birthdate LIKE '1939%' OR '1951%' OR '1963%' OR '1975%' OR '1987%' OR '1999%';
+
+- Det här tar fram alla som är födda räckor på kaninens år
+
+- Lösningen va att sortera alla år sedan plocka fram personen som bodde i samma område som han på dag 2
+
+### Solution day 3 
+- Phone: 917-288-9635
+
