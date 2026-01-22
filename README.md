@@ -190,7 +190,15 @@ ORDER BY name
 
 - phone: 838-335-7157
 ----------------------------------------------------------------------------------
+## Process solution day 8 
 
+- Vi behöver ta reda på vem som har köpt alla noah's collactibles, det är 85 stycken
+
+- grupperade alla produkter och tog ut den som hade mest (den som hade näst mest hade under 85 köp)
+
+### Solution day 8 
+
+- Phone: 212-547-3518 
 
 
 
