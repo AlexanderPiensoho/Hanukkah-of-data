@@ -93,4 +93,63 @@ It's for our database class and its manditory to only use SQL and no other langu
 
 ### Solution day 4 
 - phone: 607-231-3605
+----------------------------------------------------------------------------------
+## Process solution day 5 
+
+- Kolla efter sweatshirts (jersey), person som troligtvis köper mycket kattmat och bort i Staten Island. 
+
+- SELECT sku, desc FROM products WHERE desc LIKE '%jersey%';
+
+- JOINAR alla bord för att få ihop inköp, produkter och kunder
+- SELECT sku, desc, name, phone  FROM products JOIN orders_items USING (sku) JOIN orders USING (orderid) JOIN customers USING (customerid) WHERE desc LIKE '%jersey%';
+
+- Det här va rätt så nära, men behöver smalna till det lite till
+```
+SELECT    sku, 
+          desc, 
+          name, 
+          phone,
+          citystatezip
+FROM      products 
+JOIN      orders_items USING (sku) 
+JOIN      orders USING (orderid) 
+JOIN      customers USING (customerid) 
+WHERE     citystatezip LIKE '%stat%' AND
+          desc LIKE '%jersey%'
+;
+```
+- testade det här, och trodde verkligen att någon av namnen skulle vara rätt som va kvinna. Men ingen verkar fungera och just nu förstår jag inte varför.
+```
+SELECT    desc, 
+          name, 
+          birthdate,
+          phone,
+          citystatezip,
+          orderid
+FROM      products 
+JOIN      orders_items USING (sku) 
+JOIN      orders USING (orderid) 
+JOIN      customers USING (customerid) 
+WHERE     citystatezip LIKE '%staten island%' 
+          AND customerid IN 
+          ( 
+            SELECT customerid FROM orders JOIN orders_items USING (orderid)
+            JOIN products USING (sku)
+            WHERE desc LIKE '%jersey%'
+          ) 
+          AND customerid IN 
+          (
+            SELECT customerid FROM orders JOIN orders_items USING (orderid)
+            JOIN products USING (sku)
+            WHERE desc LIKE '%Cat%'
+          )
+GROUP BY name 
+ORDER BY name
+;
+```
+ - Nu löste jag det äntligen, jag skulle ju sortera på qty också... Något som jag totalt missat.
+
+### Solution day 5 
+- Phone: 631-507-6048
+----------------------------------------------------------------------------------
 

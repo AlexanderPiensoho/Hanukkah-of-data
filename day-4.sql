@@ -1,7 +1,7 @@
 SELECT      name, 
             phone, 
             substr(shipped,12,20) as pickup_time,
-            desc
+            desc,
 FROM        customers 
 JOIN        orders USING (customerid) 
 JOIN        orders_items USING (orderid) 
