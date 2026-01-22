@@ -4,6 +4,7 @@ SELECT      name,
             unit_price,
             total,
             COUNT(*) AS nr_orders,
+            customerid,
             orderid
 FROM        customers
 JOIN        orders USING (customerid)
@@ -14,5 +15,3 @@ GROUP BY    name
 ORDER BY    nr_orders 
             DESC LIMIT 1
 ;
-
-

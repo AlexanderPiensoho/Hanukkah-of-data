@@ -178,6 +178,20 @@ ORDER BY name
 ### Solution day 6 
 - phone: 585-838-9161
 ----------------------------------------------------------------------------------
+## Process solution day 7
+
+- Kollade alla köp som Sherri (från förra dagen) gjort med produkter som har olika färger.
+
+- Sedan kollade vi alla köp på färgade produkter som gjorts samtidigt och matchade det.
+
+- den här har gått snabbast hittils.
+
+### Solution day 7
+
+- phone: 838-335-7157
+----------------------------------------------------------------------------------
+
+
 
 
 
