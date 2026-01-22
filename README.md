@@ -152,4 +152,33 @@ ORDER BY name
 ### Solution day 5 
 - Phone: 631-507-6048
 ----------------------------------------------------------------------------------
+## Process solution day 6 
+
+- Kusinen handlar alltid på REA och med kuponger. Leta efter bra priser. 
+- Matcha wholesale_cost från products med total från orders för att leta efter försäljningar där dom gör förlust?
+- Det är en kvinna jag letar efter.
+- Hitta en person som har handlat väldigt mycket på Noahs där noah har gått med förslust. Men det är fortfaranade väldigt mycket personer kvar och det är en chansning, måste försöka smalna av mer.
+```
+SELECT      name, 
+            phone, 
+            wholesale_cost,
+            unit_price,
+            total,
+            qty,
+            desc
+FROM        customers
+JOIN        orders USING (customerid)
+JOIN        orders_items USING (orderid)
+JOIN        products USING (sku)
+WHERE wholesale_cost > unit_price 
+ORDER BY name
+;
+```
+- Kollade även vem som hade handlat väldigt mycket när Noahs gjort förlust och det va rätt person som handlade 54!! gånger.
+### Solution day 6 
+- phone: 585-838-9161
+----------------------------------------------------------------------------------
+
+
+
 
